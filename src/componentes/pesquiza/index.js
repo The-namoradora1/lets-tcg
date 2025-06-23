@@ -1,15 +1,45 @@
-import { Text, TextInput, View} from "react-native-web";
+import { TextInput, View, TouchableOpacity, Text } from "react-native-web";
 import styles from "./style.js";
+import { useState } from 'react';
 
-export default function Pesquisa(){
+async function fetchProducts(query) {
+  return [
+    { id: 1, nome: "Produto A" },
+    { id: 2, nome: "Produto B" }
+  ].filter(item => item.nome.toLowerCase().includes(query.toLowerCase()));
+}
 
-  return (<View style={styles.viewSearch}>
-    <TextInput 
-      style={styles.inputSearch} 
-      placeholder="Digite o filme que deseja buscar"
-      placeholderTextColor="#999"
-    />
-  </View>)
+export default function Pesquisa() {
+  const [pesquisaval, setpesquisa] = useState("");
+  const [data, setData] = useState([]);
 
+  const handleSearch = async () => {
+    const results = await fetchProducts(pesquisaval);
+    setData(results);
+  };
 
+  return (
+    <View style={styles.viewSearch}>
+      <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+        <TextInput
+          style={styles.inputSearch}
+          placeholder="Digite o que deseja buscar"
+          onChangeText={setpesquisa}
+          placeholderTextColor="#999"
+          value={pesquisaval}
+        />
+        <TouchableOpacity
+          style={styles.buttonSearch}
+          onPress={handleSearch}
+        >
+          <Text style={{ fontSize: 20 }}>🔍</Text>
+        </TouchableOpacity>
+      </View>
+      <View>
+        {data.map(item => (
+          <Text key={item.id}>{item.nome}</Text>
+        ))}
+      </View>
+    </View>
+  );
 }

@@ -1,20 +1,26 @@
-import {View, Text, Image} from "react-native-web";
+import {View, Text, Image, ScrollView} from "react-native-web";
 import { useRoute } from "@react-navigation/native";
 import styles from "./style";
+import Cabecalho from "../../componentes/cabecalho/index.js";
+import Pesquisa from "../../componentes/pesquiza/index.js";
 
 
 
 
 
-export default function Detalhes() {
 
-    const route = useRoute();
+export default function Produto() { const route = useRoute();
 
 
-    return (
+    return ( <View style={styles.fundo}>
+            <Cabecalho></Cabecalho>
+            
+            <Pesquisa></Pesquisa>
+
+            
+            <ScrollView style={styles.scroll}>
         
-        <View style={styles.fundo}>
-            <View>
+            <View >
                 <Image source={route.params.imagem} style={styles.movieImage}>
             </Image>
 
@@ -22,8 +28,8 @@ export default function Detalhes() {
             <Text style={styles.Titulos}> {route.params.nome} </Text>
             <Text style={styles.infos}> Preço {route.params.preco} | Categoria: {route.params.categoria} </Text>
             <Text style={styles.Descricao}>{route.params.descricao}</Text> 
-
-
+     
+</ScrollView>
         </View>
     )
 

@@ -6,9 +6,10 @@ const styles = StyleSheet.create ({
 
     movieImage: {
         alignItems: "center",
-        left:'13%',
-        width: 330, 
-        height: 390,
+        marginLeft:'10%',
+        marginRight:'10%',
+        width: 300, 
+        height: 300,
         marginBottom: 10, 
         marginTop: 30,
       },
@@ -18,9 +19,13 @@ const styles = StyleSheet.create ({
         fontWeight: "bold",
         color: "white",
         textAlign: "center",
+        marginLeft:'10%',
+        marginRight:'10%',
       },
 
       infos:{
+        marginLeft:'10%',
+        marginRight:'10%',
         fontSize: 13,
         fontWeight: "bold",
         color: "white",
@@ -37,6 +42,8 @@ const styles = StyleSheet.create ({
 
       
       Descricao:{
+        marginLeft:'10%',
+        marginRight:'10%',
         fontSize: 15,
         marginTop: 10,
         color: "white",
