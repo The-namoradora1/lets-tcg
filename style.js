@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
 
   imageBanner: {
     width: '85%',
-    height: '20%',
+    height: '30%',
     borderRadius: 10,
     marginBottom: 20,
   },

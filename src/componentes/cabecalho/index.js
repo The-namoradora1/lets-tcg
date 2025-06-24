@@ -14,7 +14,7 @@ export default function Cabecalho() {
 <TouchableOpacity>
   <Feather name='menu' size={30} color="#fff" />
 </TouchableOpacity>
-<Text style={styles.textHeader}> Let's Film </Text>
+<Text style={styles.textHeader}> Let's TCG </Text>
     <Comprabutton />
 </View>
 )
