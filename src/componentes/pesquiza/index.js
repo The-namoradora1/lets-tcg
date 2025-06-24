@@ -2,12 +2,16 @@ import { TextInput, View, TouchableOpacity, Text } from "react-native-web";
 import styles from "./style.js";
 import { useState } from 'react';
 
-async function fetchProducts(query) {
+// Mock function to simulate fetching products
+const fetchProducts = async (query) => {
+  // Replace this with your actual API call
   return [
-    { id: 1, nome: "Produto A" },
-    { id: 2, nome: "Produto B" }
+    { id: 1, nome: "Produto 1" },
+    { id: 2, nome: "Produto 2" },
+    { id: 3, nome: "Produto 3" },
   ].filter(item => item.nome.toLowerCase().includes(query.toLowerCase()));
-}
+};
+
 
 export default function Pesquisa() {
   const [pesquisaval, setpesquisa] = useState("");

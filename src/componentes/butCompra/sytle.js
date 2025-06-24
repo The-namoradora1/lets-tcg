@@ -11,16 +11,18 @@ cartButton: {
   border: 'none',
   cursor: 'pointer',
   position: 'relative',
+  left: 25,
   marginLeft: 1,
+  marginRight:1,
   color: 'white',
-  backgroundColor: '#141a29',
-width: 40,
-height: 40,
+  backgroundColor: '#9083c1',
+  width: 40,
+  height: 40
 
 },
 butquant: {
   position: 'absolute', 
-    backgroundColor: 'red',
+  backgroundColor: 'red',
   width: 15,
   height: 15,
   position: 'absolute',
@@ -32,9 +34,9 @@ butquant: {
   borderRadius: 15,
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center',
-
+  justifyContent: 'center'
 }
+
 });
 
 export default styles;

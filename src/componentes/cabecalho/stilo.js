@@ -8,7 +8,9 @@ const styles = StyleSheet.create ({
         alignItems: 'center',
         width: '90%',
         marginBottom: 10,
-        height: '8%',
+        height: '5%',
+        marginLeft:10,
+        marginTop:2
       },
 
       textHeader: {

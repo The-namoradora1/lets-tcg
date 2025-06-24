@@ -6,7 +6,7 @@ const styles = StyleSheet.create ({
 
     movieImage: {
         alignItems: "center",
-        marginLeft:'10%',
+        marginLeft:'20%',
         marginRight:'10%',
         width: 300, 
         height: 300,
@@ -34,7 +34,7 @@ const styles = StyleSheet.create ({
       },
 
       fundo:{
-        backgroundColor: '#141a29',
+        backgroundColor: '#9083c1',
         width: '100%',
         height: '100%',
 

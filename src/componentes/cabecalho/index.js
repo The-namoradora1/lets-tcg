@@ -1,7 +1,7 @@
 import { Text, View,TouchableOpacity } from "react-native-web"
 import {Feather} from "@expo/vector-icons"
 import styles from "./stilo"
-import Comprabutton from '../butCompra/index.js';
+import Contador from '../butCompra/index.js';
 
 
 
@@ -15,7 +15,8 @@ export default function Cabecalho() {
   <Feather name='menu' size={30} color="#fff" />
 </TouchableOpacity>
 <Text style={styles.textHeader}> Let's TCG </Text>
-    <Comprabutton />
+
+    <Contador />
 </View>
 )
 }
